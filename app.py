@@ -22,12 +22,16 @@ def resume():
 
 @app.route('/download-resume')
 def download_resume():
-    # Since we cannot generate binary PDF files, return a friendly message
-    return Response(
-        "This is a placeholder for the resume download. In a real implementation, "
-        "place your resume.pdf file in the static directory.",
-        mimetype='text/plain'
-    )
+    # Check if resume.pdf exists in the static directory
+    resume_path = os.path.join(app.static_folder, 'resume.pdf')
+    if os.path.exists(resume_path):
+        return send_from_directory(app.static_folder, 'resume.pdf')
+    else:
+        # Return a message if the PDF is not found
+        return Response(
+            "Please place your resume.pdf file in the static directory to enable downloads.",
+            mimetype='text/plain'
+        )
 
 @app.route('/projects')
 def projects():
