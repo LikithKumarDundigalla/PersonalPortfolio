@@ -1,0 +1,49 @@
+/* Custom styles to complement Bootstrap */
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-item {
+    padding: 20px;
+    border-left: 2px solid var(--bs-primary);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 28px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--bs-primary);
+}
+
+.project-card {
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.social-links a {
+    font-size: 24px;
+    margin: 0 10px;
+    color: var(--bs-secondary);
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--bs-primary);
+}

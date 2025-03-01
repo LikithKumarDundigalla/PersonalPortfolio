@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Projects | Portfolio{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Projects</h2>
+
+<div class="row g-4">
+    <div class="col-md-6">
+        <div class="card project-card h-100">
+            <div class="card-body">
+                <h3 class="card-title">E-commerce Platform</h3>
+                <p class="card-text">A full-featured e-commerce solution built with Python and React.</p>
+                <div class="mb-3">
+                    <span class="badge bg-primary me-2">Python</span>
+                    <span class="badge bg-primary me-2">React</span>
+                    <span class="badge bg-primary me-2">PostgreSQL</span>
+                </div>
+                <a href="https://github.com/username/project1" class="btn btn-outline-primary">
+                    <i class="fab fa-github me-2"></i>View on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card project-card h-100">
+            <div class="card-body">
+                <h3 class="card-title">Task Management API</h3>
+                <p class="card-text">RESTful API for task management built with Flask and SQLAlchemy.</p>
+                <div class="mb-3">
+                    <span class="badge bg-primary me-2">Flask</span>
+                    <span class="badge bg-primary me-2">SQLAlchemy</span>
+                    <span class="badge bg-primary me-2">REST</span>
+                </div>
+                <a href="https://github.com/username/project2" class="btn btn-outline-primary">
+                    <i class="fab fa-github me-2"></i>View on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Resume | Portfolio{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Resume</h2>
+    <a href="{{ url_for('download_resume') }}" class="btn btn-primary">
+        <i class="fas fa-download me-2"></i>Download PDF
+    </a>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h3>Education</h3>
+        <div class="mb-4">
+            <h4>Bachelor of Science in Computer Science</h4>
+            <p>University of Technology | 2015 - 2019</p>
+            <p>GPA: 3.8/4.0</p>
+        </div>
+
+        <h3>Work Experience</h3>
+        <div class="mb-4">
+            <h4>Senior Full Stack Developer</h4>
+            <p>Tech Solutions Inc. | 2019 - Present</p>
+            <ul>
+                <li>Led development of enterprise web applications</li>
+                <li>Mentored junior developers</li>
+                <li>Implemented CI/CD pipelines</li>
+            </ul>
+        </div>
+
+        <h3>Certifications</h3>
+        <ul>
+            <li>AWS Certified Developer</li>
+            <li>Google Cloud Professional Developer</li>
+            <li>Microsoft Certified: Azure Developer Associate</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
