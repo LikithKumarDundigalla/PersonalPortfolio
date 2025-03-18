@@ -16,9 +16,17 @@ def home():
 def about():
     return render_template('about.html')
 
-@app.route('/resume')
-def resume():
-    return render_template('resume.html')
+@app.route('/projects')
+def projects():
+    return render_template('projects.html')
+
+@app.route('/experience')
+def experience():
+    return render_template('experience.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 @app.route('/download-resume')
 def download_resume():
@@ -32,18 +40,6 @@ def download_resume():
             "Please place your resume.pdf file in the static directory to enable downloads.",
             mimetype='text/plain'
         )
-
-@app.route('/projects')
-def projects():
-    return render_template('projects.html')
-
-@app.route('/experience')
-def experience():
-    return render_template('experience.html')
-
-@app.route('/contact')
-def contact():
-    return render_template('contact.html')
 
 # Error handlers
 @app.errorhandler(404)
