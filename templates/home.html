@@ -3,11 +3,54 @@
 {% block title %}Home | Portfolio{% endblock %}
 
 {% block content %}
-<div class="text-center mb-5">
-    <!--<img src="pic.jpg" alt="Profile Picture" class="profile-image mb-4">-->
-    <h1 class="display-4">Likith Kumar Dundigalla</h1>
-    <p class="lead">Data Engineer | AI/ML Engineer | Open Source Enthusiast </p>
-    <div class="mt-4">
+<div class="profile-container mb-5">
+    <div class="profile-section">
+        <div class="profile-info">
+            <img src="{{ url_for('static', filename='images/pic.jpg') }}" alt="Profile Picture" class="profile-image mb-4">
+            <h1 class="display-4">Likith Kumar Dundigalla</h1>
+            <p class="lead">Data Engineer | AI/ML Engineer | Open Source Enthusiast </p>
+        </div>
+        
+        <!-- GitHub metrics section commented out as requested
+        <div class="github-metrics-container">
+            <div class="github-metrics" id="github-metrics">
+                <div class="metric-item">
+                    <div class="metric-value">20+</div>
+                    <div class="metric-label">GitHub Repositories</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">300+</div>
+                    <div class="metric-label">GitHub Contributions</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">15+</div>
+                    <div class="metric-label">Pull Requests</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">10+</div>
+                    <div class="metric-label">Open Source Contributions</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">150+</div>
+                    <div class="metric-label">LeetCode Problems</div>
+                </div>
+            </div>
+            <div class="metrics-navigation">
+                <button id="prev-metric" aria-label="Previous metric"><i class="fas fa-chevron-left"></i></button>
+                <button id="next-metric" aria-label="Next metric"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="metrics-dots" id="metrics-dots">
+                <div class="metrics-dot active"></div>
+                <div class="metrics-dot"></div>
+                <div class="metrics-dot"></div>
+                <div class="metrics-dot"></div>
+                <div class="metrics-dot"></div>
+            </div>
+        </div>
+        -->
+    </div>
+    
+    <div class="mt-4 text-center">
         <p class="fs-5">
             Passionate about creating elegant solutions to complex problems. 
             Specialized in data driven solutions with 3+ years of experience building
@@ -15,4 +58,272 @@
         </p>
     </div>
 </div>
+
+<!-- Include About Section -->
+<section id="about" class="mb-5">
+    <h2 class="mb-4">About Me</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Background</h3>
+            <p>
+                I remember watching The Social Dilemma on Netflix—it was all about how platforms keep us hooked. But while most people focused on the addictive nature of social media, I was more fascinated by the tech behind it. The way data was being used to drive recommendations and engagement blew my mind. That's what got me interested in data.
+    <br>
+                <br>I started as a Data Engineer, working with large-scale data processing, building ETL pipelines, and optimizing data flow for better efficiency. Along the way, I also got into data analysis and built dashboards to derive insights, helping teams make better decisions. But over time, I realized my role was mostly about handling the initial stages of data—moving it, transforming it, and storing it. I wanted to go beyond that. I wanted to understand how data could be used to make predictions, drive decisions, and power AI-driven systems.
+    <br>
+                <br>That's when I decided to dive deeper and pursue my Master's in Data Science. During my studies, I worked on projects involving machine learning, natural language processing, transformers, and large language models (LLMs). Learning how AI interprets and generates language, how models like GPT and BERT work, and how data science can be applied in real-world scenarios was a game-changer for me.
+    <br>
+                <br>Now, with experience in both data engineering and data science, I see the bigger picture—how raw data transforms into meaningful insights and AI-driven solutions. And that's exactly what keeps me passionate about this field.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h3>Skills</h3>
+            <div class="mb-4">
+                <h4>Expertise Areas</h4>
+                <span class="badge bg-primary me-2 mb-2">Data Engineering</span>
+                <span class="badge bg-primary me-2 mb-2"> Data Analytics</span>
+                <span class="badge bg-primary me-2 mb-2">Machine Learning</span>
+                <span class="badge bg-primary me-2 mb-2">Artificial Intelligence</span>
+            </div>
+            <div class="mb-4">
+                <h4>Frameworks & Tools</h4>
+                <span class="badge bg-primary me-2 mb-2">Data Engineering</span>
+                <p>Expertise in building and maintaining scalable data infrastructure and pipelines to enable efficient data processing and analysis.</p>
+                <span class="badge bg-secondary me-2 mb-2">ETL Pipelines Design and Development</span>
+                <span class="badge bg-secondary me-2 mb-2">Python (Pandas, NumPy, PySpark)</span>
+                <span class="badge bg-secondary me-2 mb-2">Apache - (Spark, Hadoop, Kafka, Airflow)</span>
+                <span class="badge bg-secondary me-2 mb-2">Cloud - AWS(EMR, Glue, S3, Redshift, Lambda, Cloudwatch), Azure(Data Factory, Confluent)</span>
+                <span class="badge bg-secondary me-2 mb-2">SQL & NoSQL Databases  - (SQL Server, PostgreSQL, MongoDB, DynamoDB, Neo4j, FAISS, Elasticsearch)</span>
+
+                <br>
+
+                <span class="badge bg-primary me-2 mb-2">Data Analytics</span>
+                <p>Proficient in extracting insights from data, performing statistical analysis, and communicating findings to drive informed decision-making.</p>
+                <span class="badge bg-secondary me-2 mb-2">DOMO BI</span>
+                <span class="badge bg-secondary me-2 mb-2">Power BI</span>
+                <span class="badge bg-secondary me-2 mb-2">Tableau</span>
+                <span class="badge bg-secondary me-2 mb-2">Libraries(matplotlib, seaborn, plotly)</span>
+
+    <br>
+                <span class="badge bg-primary me-2 mb-2">Machine Learning & Artificial Intelligence</span>
+                <p>Expertise in AI model development, fine-tuning LLMs, and building intelligent retrieval systems.</p>
+                <span class="badge bg-secondary me-2 mb-2">Libraries-Scikit-learn, TensorFlow, PyTorch</span>
+                <span class="badge bg-secondary me-2 mb-2">Retrieval-Augmented Generation (RAG) & AI Agents</span>
+                <span class="badge bg-secondary me-2 mb-2">Deep Learning - Neural Networks(RNN, CNN, KNN)</span>
+                <span class="badge bg-secondary me-2 mb-2">Transformers & LLMs (GPT, BERT, Mistral, ChatGPT-4, Mistral AI, Gemini, Llama)</span>
+                <span class="badge bg-secondary me-2 mb-2">Model Fine-Tuning & Optimization - LoRA, QLoRA, vllm</span>
+                <!--span class="badge bg-secondary me-2 mb-2">Multi-Model AI (CLip, D-ID, CLIP)</span-->
+                <span class="badge bg-secondary me-2 mb-2">Cloud - Azure(AI Search, AI Foundry, OpenAI Services, Storage), AWS (SageMaker)</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Include Education Section -->
+<section id="education" class="mb-5">
+    <h2 class="mb-4">Education</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>Master of Science in Data Science</h3>
+            <p class="text-muted">University of Arizona | Aug 2023 - Dec 2024 | Tucson, AZ, USA</p>
+            <ul>
+                <li>Specialized in Machine Learning, Natural Language Processing, and Large Language Models</li>
+                <li>Relevant Coursework: Advanced Machine Learning, Deep Learning, NLP, Data Mining, Big Data Analytics</li>
+                <li>GPA: 3.8/4.0</li>
+            </ul>
+        </div>
+        <div class="timeline-item">
+            <h3>Bachelor of Technology in Electronics and Communication Engineering</h3>
+            <p class="text-muted">Jawaharlal Nehru Technological University | 2018 - 2022 | Hyderabad, India</p>
+            <ul>
+                <li>Focused on Communication equipment/mediums, Computer Science fundamentals, Data Structures, and Algorithms</li>
+                <li>Relevant Coursework: Database Management Systems, Data Structures, Operating Systems, Computer Networks</li>
+                <li>GPA: 3.5/4.0</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Include Experience Section -->
+<section id="experience" class="mb-5">
+    <h2 class="mb-4">Experience</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>AI Programmer (Volunteer)</h3>
+            <p class="text-muted">Acts4Unity Foundation | Feb 2025 - Present | Palo Alto, CA, USA</p>
+            <ul>
+                <li>Developing a multi-modal AI video agent for mental health support using D-ID, Gemini LLM, and Wav2Vec.
+                <li>Implemented facial expression analysis and micro-expression detection for emotional intelligence. </li>
+                <li> Integrated secure databases to track emotional analytics and improve conversational AI capabilities.</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Data Science Intern</h3>
+            <p class="text-muted">Tricon Infotech LLC | May 2024 - Jul 2024 | Hoboken, NJ, USA</p>
+            <ul>
+                <li>Built an AI-driven educational content tagging system, automating classification with 95% accuracy using GPT and Neo4j.</li>
+                <li>Developed NLP pipelines using BERT embeddings integrated into a knowledge graph, enhancing content retrieval by 100%.</li>
+                <li>Created a Gemini-powered chatbot translating natural language into Cypher, improving query response time by 70%</li>
+                <li>Collaborated closely with cross-functional stakeholders and engineering teams, refining algorithms based on real-time feedback.</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Professional development</h3>
+            <p class="text-muted">Career Break| Aug 2023 - Dec 2024 | Tucson, AZ, USA</p>
+            <ul>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Data Engineer (Contract)</h3>
+            <p class="text-muted">HealthEdge| Jan 2023 - Jun 2023 | Alexandria, VA, USA</p>
+            <ul>
+                <li>Engineered HIPAA-compliant real-time FHIR/HL7 data pipelines, increasing processing efficiency by 90%.</li>
+                <li>Automated SQL stored procedures handling 1M+ transactions weekly, reducing data latency significantly.</li>
+                <li>Designed scalable streaming solutions with Azure, Kafka; enhanced issue detection with DataDog, reducing downtime by 40%.</li>
+                <li>Integrated unit tests and automated deployments, enhancing pipeline reliability and production stability.</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Data Engineer (Contract)</h3>
+            <p class="text-muted">Informa | Apr 2022 - Jan 2023 | New York, NY, USA</p>
+            <ul>
+                <li>Built AWS-based Spark ETL pipelines, integrating data from 50+ global events into DOMO BI with 100% validation accuracy.</li>
+                <li>Created governance dashboards resolving critical data leakage, ensuring accurate and reliable reporting.</li>
+                <li>Led migration of 10M+ records from DocumentDB to PostgreSQL, tripling performance and reducing costs by 25%</li>
+                <li>Automated real-time data quality alerts via Microsoft Teams integration, reducing resolution time by 99%.</li>
+                <li>Built AI-driven recommendation systems for personalized notifications, increasing user engagement by 40%.</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Associate Software Engineer</h3>
+            <p class="text-muted">Tricon Infotech Pvt Ltd | Apr 2022 - Jun 2023</p>
+            <ul>
+                <li>Worked as a Data Engineer on client projects for Informa Markets and HealthEdge, delivering scalable data solutions. Collaborated with cross-functional teams to build, optimize, and maintain data pipelines, ensuring efficient data processing and analytics.</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Business Analyst and Operations Support</h3>
+            <p class="text-muted">Santhoshi Enterprises(Family Group) | Jan 2019 - Mar 2022 | Hyderabad, TG, India</p>
+            <ul>
+                <li>Analyzed sales data and customer behaviors, leading to the launch of a second store, increasing revenue by 25%. </li>
+                <li>Designed inventory management systems, reducing stock shortages by 30% and improving availability to 95%. </li>
+                <li>Collaborated with procurement and management teams, streamlining operations and enhancing customer satisfaction. </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!-- Include Projects Section -->
+<section id="projects" class="mb-5">
+    <h2 class="mb-4">Projects</h2>
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card project-card h-100">
+                <div class="card-body">
+                    <h3 class="card-title">Restaurant Chatbot | MenuData.ai</h3>
+                    <p class="card-text">A restaurant recommendation engine built on San Francisco based restaurant data with live data from wikipedia and newapi.</p>
+                    <div class="mb-3">
+                        <span class="badge bg-primary me-2">Python</span>
+                        <span class="badge bg-primary me-2">FAISS</span>
+                        <span class="badge bg-primary me-2">LLM(Mistral AI)</span>
+                        <span class="badge bg-primary me-2">SentenceTransformer(all-MiniLM-L6-v2)</span>
+                    </div>
+                    <a href="https://menudata-likithkumardundigalla.streamlit.app/" class="btn btn-outline-primary">
+                        <i class="fas fa-robot"></i>Chatbot
+                    </a>
+                    <a href="https://github.com/LikithKumarDundigalla/MenuData" class="btn btn-outline-primary">
+                        <i class="fab fa-github me-2"></i>View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <div class="card project-card h-100">
+                <div class="card-body">
+                    <h3 class="card-title">Human or ChatGPT Generated Content?</h3>
+                    <p class="card-text">This project implements multiple NLP-based classification techniques to distinguish between human-written and ChatGPT-generated text.</p>
+                    <div class="mb-3">
+                        <span class="badge bg-primary me-2">nltk</span>
+                        <span class="badge bg-primary me-2">gensim</span>
+                        <span class="badge bg-primary me-2">scikit-learn</span>
+                        <span class="badge bg-primary me-2">matplotlib</span>
+                        <span class="badge bg-primary me-2">seaborn</span>
+                    </div>
+                    <a href="https://github.com/LikithKumarDundigalla/Distinguishing-Between-Human-Generated-and-ChatGPT-generated-content" class="btn btn-outline-primary">
+                        <i class="fab fa-github me-2"></i>View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <div class="card project-card h-100">
+                <div class="card-body">
+                    <h3 class="card-title">Multi-label Emotion Detection </h3>
+                    <p class="card-text">This project implements multiple NLP-based classification techniques to predict emotions from text data, identifying sentiments such as admiration, amusement, gratitude, love, pride, relief, and remorse.</p>
+                    <div class="mb-3">
+                        <span class="badge bg-primary me-2">transformers</span>
+                        <span class="badge bg-primary me-2">tensorflow </span>
+                        <span class="badge bg-primary me-2">pandas </span>
+                        <span class="badge bg-primary me-2">numpy</span>
+                    </div>
+                    <a href="https://github.com/LikithKumarDundigalla/NN_Project" class="btn btn-outline-primary">
+                        <i class="fab fa-github me-2"></i>View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Include Contact Section -->
+<section id="contact" class="mb-5">
+    <h2 class="mb-4">Contact</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h3 class="mb-4">Let's Connect!</h3>
+                    
+                    <div class="social-links mb-4">
+                        <a href="https://github.com/LikithKumarDundigalla" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/likithkumard04" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:likithkumard@arizona.edu" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+
+                    <div class="contact-details">
+                        <p class="mb-2">
+                            <i class="fas fa-envelope me-2"></i>
+                            likithkumard@arizona.edu
+                        </p>
+                        <p class="mb-2">
+                            <i class="fab fa-github me-2"></i>
+                            github.com/LikithKumarDundigalla
+                        </p>
+                        <p class="mb-2">
+                            <i class="fab fa-linkedin me-2"></i>
+                            linkedin.com/in/likithkumard04
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}

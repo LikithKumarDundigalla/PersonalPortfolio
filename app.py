@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, send_from_directory, Response
+from flask import Flask, render_template, send_from_directory, Response, jsonify
 import logging
 
 # Configure logging
@@ -11,22 +11,6 @@ app.secret_key = os.environ.get("SESSION_SECRET", "default-secret-key")
 @app.route('/')
 def home():
     return render_template('home.html')
-
-@app.route('/about')
-def about():
-    return render_template('about.html')
-
-@app.route('/projects')
-def projects():
-    return render_template('projects.html')
-
-@app.route('/experience')
-def experience():
-    return render_template('experience.html')
-
-@app.route('/contact')
-def contact():
-    return render_template('contact.html')
 
 @app.route('/download-resume')
 def download_resume():
@@ -41,6 +25,41 @@ def download_resume():
             mimetype='text/plain'
         )
 
+# GitHub API mock endpoint (for demonstration purposes)
+@app.route('/api/github-activity')
+def github_activity():
+    # This would typically fetch data from GitHub API
+    # For now, we'll return mock data
+    mock_data = {
+        "stats": {
+            "repositories": 20,
+            "contributions": 300,
+            "pullRequests": 15,
+            "openSource": 10
+        },
+        "recent_commits": [
+            {
+                "repo": "MenuData.ai",
+                "message": "Added RAG implementation with FAISS vector database",
+                "type": "commit",
+                "date": "2 days ago"
+            },
+            {
+                "repo": "Human-vs-AI-Text-Detection",
+                "message": "Improved model accuracy by 15% with feature engineering",
+                "type": "commit",
+                "date": "1 week ago"
+            },
+            {
+                "repo": "Multi-label-Emotion-Detection",
+                "message": "Merged transformer-based model improvements",
+                "type": "pull_request",
+                "date": "2 weeks ago"
+            }
+        ]
+    }
+    return jsonify(mock_data)
+
 # Error handlers
 @app.errorhandler(404)
 def page_not_found(e):
@@ -49,3 +68,6 @@ def page_not_found(e):
 @app.errorhandler(500)
 def internal_server_error(e):
     return render_template('500.html'), 500
+
+if __name__ == '__main__':
+    app.run(debug=True)
