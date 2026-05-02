@@ -1,324 +1,595 @@
 {% extends "base.html" %}
 
-{% block title %}Home | Portfolio{% endblock %}
+{% block title %}Likith Kumar Dundigalla | Data Engineer & AI/ML Engineer | Chicago, IL{% endblock %}
 
 {% block content %}
-<div class="profile-container mb-5">
-    <div class="profile-section">
-        <div class="profile-info">
-            <img src="{{ url_for('static', filename='images/pic.jpg') }}" alt="Profile Picture" class="profile-image mb-4">
-            <h1 class="display-4">Likith Kumar Dundigalla</h1>
-            <p class="lead">Data Engineer | AI/ML Engineer | Open Source Enthusiast </p>
+
+<!-- ═══════════════════════════════════════════════════════════ HERO -->
+<div class="hero-container mb-5">
+    <div class="hero-section">
+        <div class="hero-image-wrapper">
+            <img src="{{ url_for('static', filename='images/pic.jpg') }}"
+                 alt="Likith Kumar Dundigalla - Data Scientist and Data Engineer"
+                 class="profile-image">
         </div>
-        
-        <!-- GitHub metrics section commented out as requested
-        <div class="github-metrics-container">
-            <div class="github-metrics" id="github-metrics">
-                <div class="metric-item">
-                    <div class="metric-value">20+</div>
-                    <div class="metric-label">GitHub Repositories</div>
+        <div class="hero-content">
+            <div class="hero-badges mb-3">
+                <span class="status-badge"><i class="fas fa-circle-dot me-1"></i>Open to Work</span>
+                <span class="location-badge ms-2"><i class="fas fa-location-dot me-1"></i>Greater Chicago Area</span>
+            </div>
+
+            <h1 class="hero-name">Likith Kumar Dundigalla</h1>
+            <p class="hero-title">Data Scientist &amp; Data Engineer | AI/ML Engineer</p>
+            <p class="hero-subtitle">
+                Python &middot; SQL &middot; Spark &middot; NLP &middot; PyTorch &nbsp;|&nbsp;
+                Healthcare &middot; Edtech &middot; Retail
+            </p>
+            <p class="hero-description">
+                I build ML systems and data pipelines that help companies move from gut-feel decisions
+                to model-driven operations &mdash; at production scale. 4+ years of end-to-end delivery
+                for clients including <strong>Worldpac, HealthEdge, Informa Markets, McGraw Hill,</strong>
+                and <strong>Edmentum</strong>.
+            </p>
+
+            <div class="hero-stats mb-4">
+                <div class="stat-item">
+                    <span class="stat-value">4+</span>
+                    <span class="stat-label">Years Exp</span>
                 </div>
-                <div class="metric-item">
-                    <div class="metric-value">300+</div>
-                    <div class="metric-label">GitHub Contributions</div>
+                <div class="stat-item">
+                    <span class="stat-value">$15M+</span>
+                    <span class="stat-label">Revenue Impact</span>
                 </div>
-                <div class="metric-item">
-                    <div class="metric-value">15+</div>
-                    <div class="metric-label">Pull Requests</div>
+                <div class="stat-item">
+                    <span class="stat-value">3.88</span>
+                    <span class="stat-label">MS GPA</span>
                 </div>
-                <div class="metric-item">
-                    <div class="metric-value">10+</div>
-                    <div class="metric-label">Open Source Contributions</div>
-                </div>
-                <div class="metric-item">
-                    <div class="metric-value">150+</div>
-                    <div class="metric-label">LeetCode Problems</div>
+                <div class="stat-item">
+                    <span class="stat-value">27%</span>
+                    <span class="stat-label">Cost Reduction</span>
                 </div>
             </div>
-            <div class="metrics-navigation">
-                <button id="prev-metric" aria-label="Previous metric"><i class="fas fa-chevron-left"></i></button>
-                <button id="next-metric" aria-label="Next metric"><i class="fas fa-chevron-right"></i></button>
-            </div>
-            <div class="metrics-dots" id="metrics-dots">
-                <div class="metrics-dot active"></div>
-                <div class="metrics-dot"></div>
-                <div class="metrics-dot"></div>
-                <div class="metrics-dot"></div>
-                <div class="metrics-dot"></div>
+
+            <div class="hero-cta">
+                <a href="LikithKumarDundigalla_DataScience_Resume.pdf" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-download me-2"></i>Download Resume
+                </a>
+                <a href="mailto:likithkumar.dundigalla04@gmail.com" class="btn btn-outline-light">
+                    <i class="fas fa-envelope me-2"></i>Let's Connect
+                </a>
+                <a href="https://linkedin.com/in/likithkumardundigalla-data-ai" target="_blank" class="btn btn-outline-light">
+                    <i class="fab fa-linkedin me-2"></i>LinkedIn
+                </a>
+                <a href="https://github.com/LikithKumarDundigalla" target="_blank" class="btn btn-outline-light">
+                    <i class="fab fa-github me-2"></i>GitHub
+                </a>
             </div>
         </div>
-        -->
     </div>
-    
-    <div class="mt-4 text-center">
-        <p class="fs-5">
-            Passionate about creating elegant solutions to complex problems. 
-            Specialized in data driven solutions with 3+ years of experience building
-            scalable applications using modern technologies.
-        </p>
+
+    <!-- Tech stack strip -->
+    <div class="tech-stack-row mt-4">
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">Databricks</span>
+        <span class="tech-pill">Snowflake</span>
+        <span class="tech-pill">PySpark</span>
+        <span class="tech-pill">AWS</span>
+        <span class="tech-pill">Azure</span>
+        <span class="tech-pill">LLMs</span>
+        <span class="tech-pill">RAG</span>
+        <span class="tech-pill">PyTorch</span>
+        <span class="tech-pill">HuggingFace</span>
+        <span class="tech-pill">FastAPI</span>
+        <span class="tech-pill">Airflow</span>
+        <span class="tech-pill">Neo4j</span>
+        <span class="tech-pill">Docker</span>
     </div>
 </div>
 
-<!-- Include About Section -->
+
+<!-- ═══════════════════════════════════════════════════════════ ABOUT -->
 <section id="about" class="mb-5">
     <h2 class="mb-4">About Me</h2>
-    <div class="row">
-        <div class="col-md-6">
-            <h3>Background</h3>
-            <p>
-                I remember watching The Social Dilemma on Netflix—it was all about how platforms keep us hooked. But while most people focused on the addictive nature of social media, I was more fascinated by the tech behind it. The way data was being used to drive recommendations and engagement blew my mind. That's what got me interested in data.
-    <br>
-                <br>I started as a Data Engineer, working with large-scale data processing, building ETL pipelines, and optimizing data flow for better efficiency. Along the way, I also got into data analysis and built dashboards to derive insights, helping teams make better decisions. But over time, I realized my role was mostly about handling the initial stages of data—moving it, transforming it, and storing it. I wanted to go beyond that. I wanted to understand how data could be used to make predictions, drive decisions, and power AI-driven systems.
-    <br>
-                <br>That's when I decided to dive deeper and pursue my Master's in Data Science. During my studies, I worked on projects involving machine learning, natural language processing, transformers, and large language models (LLMs). Learning how AI interprets and generates language, how models like GPT and BERT work, and how data science can be applied in real-world scenarios was a game-changer for me.
-    <br>
-                <br>Now, with experience in both data engineering and data science, I see the bigger picture—how raw data transforms into meaningful insights and AI-driven solutions. And that's exactly what keeps me passionate about this field.
-            </p>
-        </div>
-        <div class="col-md-6">
-            <h3>Skills</h3>
-            <div class="mb-4">
-                <h4>Expertise Areas</h4>
-                <span class="badge bg-primary me-2 mb-2">Data Engineering</span>
-                <span class="badge bg-primary me-2 mb-2"> Data Analytics</span>
-                <span class="badge bg-primary me-2 mb-2">Machine Learning</span>
-                <span class="badge bg-primary me-2 mb-2">Artificial Intelligence</span>
-            </div>
-            <div class="mb-4">
-                <h4>Frameworks & Tools</h4>
-                <span class="badge bg-primary me-2 mb-2">Data Engineering</span>
-                <p>Expertise in building and maintaining scalable data infrastructure and pipelines to enable efficient data processing and analysis.</p>
-                <span class="badge bg-secondary me-2 mb-2">ETL Pipelines Design and Development</span>
-                <span class="badge bg-secondary me-2 mb-2">Python (Pandas, NumPy, PySpark)</span>
-                <span class="badge bg-secondary me-2 mb-2">Apache - (Spark, Hadoop, Kafka, Airflow)</span>
-                <span class="badge bg-secondary me-2 mb-2">Cloud - AWS(EMR, Glue, S3, Redshift, Lambda, Cloudwatch), Azure(Data Factory, Confluent)</span>
-                <span class="badge bg-secondary me-2 mb-2">SQL & NoSQL Databases  - (SQL Server, PostgreSQL, MongoDB, DynamoDB, Neo4j, FAISS, Elasticsearch)</span>
-
-                <br>
-
-                <span class="badge bg-primary me-2 mb-2">Data Analytics</span>
-                <p>Proficient in extracting insights from data, performing statistical analysis, and communicating findings to drive informed decision-making.</p>
-                <span class="badge bg-secondary me-2 mb-2">DOMO BI</span>
-                <span class="badge bg-secondary me-2 mb-2">Power BI</span>
-                <span class="badge bg-secondary me-2 mb-2">Tableau</span>
-                <span class="badge bg-secondary me-2 mb-2">Libraries(matplotlib, seaborn, plotly)</span>
-
-    <br>
-                <span class="badge bg-primary me-2 mb-2">Machine Learning & Artificial Intelligence</span>
-                <p>Expertise in AI model development, fine-tuning LLMs, and building intelligent retrieval systems.</p>
-                <span class="badge bg-secondary me-2 mb-2">Libraries-Scikit-learn, TensorFlow, PyTorch</span>
-                <span class="badge bg-secondary me-2 mb-2">Retrieval-Augmented Generation (RAG) & AI Agents</span>
-                <span class="badge bg-secondary me-2 mb-2">Deep Learning - Neural Networks(RNN, CNN, KNN)</span>
-                <span class="badge bg-secondary me-2 mb-2">Transformers & LLMs (GPT, BERT, Mistral, ChatGPT-4, Mistral AI, Gemini, Llama)</span>
-                <span class="badge bg-secondary me-2 mb-2">Model Fine-Tuning & Optimization - LoRA, QLoRA, vllm</span>
-                <!--span class="badge bg-secondary me-2 mb-2">Multi-Model AI (CLip, D-ID, CLIP)</span-->
-                <span class="badge bg-secondary me-2 mb-2">Cloud - Azure(AI Search, AI Foundry, OpenAI Services, Storage), AWS (SageMaker)</span>
-            </div>
-        </div>
+    <div class="about-content">
+        <p class="fs-5 mb-3">
+            I build ML systems and data pipelines that help companies move from gut-feel decisions
+            to model-driven operations &mdash; at production scale.
+        </p>
+        <p class="mb-3">
+            I started as a Data Engineer at Tricon Infotech, where I worked embedded in client teams at
+            <strong>Informa Markets</strong> and <strong>HealthEdge</strong>. At Informa, a critical pipeline
+            failure was threatening a <strong>$50M annual event contract</strong> &mdash; I built the emergency
+            reconciliation pipeline that recovered the data and saved the engagement. At HealthEdge, I replaced
+            a legacy batch system with a real-time EHR pipeline processing <strong>1M+ records</strong> that
+            previously took 6 hours, now running continuously.
+        </p>
+        <p class="mb-3">
+            That drive to go deeper led me to pursue an <strong>M.S. in Data Science at the University of
+            Arizona (GPA 3.88)</strong> with a Graduate Certificate in NLP. I specialized in transformer
+            architectures, RAG systems, and building production-grade AI applications. During that time I also
+            built an educational knowledge graph system for <strong>McGraw Hill Education</strong> &mdash;
+            using BERT + Neo4j to automatically tag 1,000+ textbooks and deliver curriculum-aligned answers
+            to student queries, replacing a manual process that required tens of staff.
+        </p>
+        <p class="mb-3">
+            More recently, I've worked across the AI and data science spectrum. At <strong>CFG Health</strong>,
+            my Power BI dashboards directly drove a <strong>27% reduction in employee salary expenditure</strong>
+            ($11M &rarr; $8M in 3 months) by exposing workforce inefficiencies across county jail healthcare
+            facilities. At <strong>Edmentum</strong>, I led a 4-person team through a full-scale SQL Server &rarr;
+            PostgreSQL migration saving millions in infrastructure costs.
+        </p>
+        <p class="mb-3">
+            At <strong>Worldpac</strong> today, I'm leading Phase 2 of a pricing optimization initiative &mdash;
+            refining SKU-level strategy targeting <strong>$15M+ in revenue uplift</strong>, while simultaneously
+            building behavioral segmentation models to reduce discount margin leakage across their auto parts catalog.
+        </p>
+        <p>
+            I'm actively seeking <strong>Data Scientist, Data Engineer,</strong> and <strong>ML Engineer</strong>
+            roles where I can architect intelligent, production-scale systems. Remote or hybrid, open to all industries.
+        </p>
     </div>
 </section>
 
-<!-- Include Education Section -->
+
+<!-- ═══════════════════════════════════════════════════════════ SKILLS -->
+<section id="skills" class="mb-5">
+    <h2 class="mb-4">Skills</h2>
+    <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+            <div class="skill-category-card">
+                <h4><i class="fas fa-code me-2"></i>Programming &amp; Tools</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag skill-highlight">Python</span>
+                    <span class="skill-tag skill-highlight">SQL</span>
+                    <span class="skill-tag">Bash</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">FastAPI</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Postman</span>
+                    <span class="skill-tag">GitHub Actions</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="skill-category-card">
+                <h4><i class="fas fa-database me-2"></i>Big Data &amp; Visualization</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag skill-highlight">Databricks</span>
+                    <span class="skill-tag skill-highlight">Snowflake</span>
+                    <span class="skill-tag skill-highlight">PySpark</span>
+                    <span class="skill-tag">Unity Catalog</span>
+                    <span class="skill-tag">Apache Airflow</span>
+                    <span class="skill-tag">Kafka</span>
+                    <span class="skill-tag">ETL Pipelines</span>
+                    <span class="skill-tag">Tableau</span>
+                    <span class="skill-tag">Power BI &amp; DAX</span>
+                    <span class="skill-tag">Domo BI</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="skill-category-card">
+                <h4><i class="fas fa-brain me-2"></i>ML &amp; AI</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag skill-highlight">RAG / Agentic RAG</span>
+                    <span class="skill-tag skill-highlight">LLMs</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">HuggingFace Transformers</span>
+                    <span class="skill-tag">BERT &amp; GPT variants</span>
+                    <span class="skill-tag">vLLM</span>
+                    <span class="skill-tag">Fine-Tuning</span>
+                    <span class="skill-tag">Prompt Engineering</span>
+                    <span class="skill-tag">Chain-of-Thought</span>
+                    <span class="skill-tag">scikit-learn</span>
+                    <span class="skill-tag">OpenAI Whisper</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="skill-category-card">
+                <h4><i class="fas fa-cloud me-2"></i>Cloud &amp; DevOps</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag skill-highlight">AWS</span>
+                    <span class="skill-tag skill-highlight">Azure</span>
+                    <span class="skill-tag">S3 &middot; DynamoDB &middot; EC2</span>
+                    <span class="skill-tag">Azure AI Studio</span>
+                    <span class="skill-tag">Azure Cognitive Search</span>
+                    <span class="skill-tag">Microsoft Fabric</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">CI/CD &middot; Jenkins</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="skill-category-card">
+                <h4><i class="fas fa-server me-2"></i>Databases &amp; Search</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">SQL Server</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Neo4j</span>
+                    <span class="skill-tag">FAISS</span>
+                    <span class="skill-tag">Pinecone</span>
+                    <span class="skill-tag">Elasticsearch</span>
+                    <span class="skill-tag">RabbitMQ</span>
+                    <span class="skill-tag">Confluent Kafka</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="skill-category-card">
+                <h4><i class="fas fa-users me-2"></i>Methodologies</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">Agile / Scrum</span>
+                    <span class="skill-tag">Medallion Architecture</span>
+                    <span class="skill-tag">Cross-Functional Teams</span>
+                    <span class="skill-tag">Technical Documentation</span>
+                    <span class="skill-tag">Developer APIs</span>
+                    <span class="skill-tag">HL7 / FHIR (Healthcare)</span>
+                    <span class="skill-tag">Knowledge Graphs</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════ EDUCATION -->
 <section id="education" class="mb-5">
     <h2 class="mb-4">Education</h2>
     <div class="timeline">
+
         <div class="timeline-item">
-            <h3>Master of Science in Data Science</h3>
-            <p class="text-muted">University of Arizona | Aug 2023 - Dec 2024 | Tucson, AZ, USA</p>
+            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                <div>
+                    <h3>Master of Science in Data Science</h3>
+                    <p class="text-muted mb-1">University of Arizona &middot; Aug 2023 &ndash; Dec 2024 &middot; Tucson, AZ</p>
+                </div>
+                <span class="badge bg-primary gpa-badge">GPA: 3.88 / 4.0</span>
+            </div>
             <ul>
                 <li>Specialized in Machine Learning, Natural Language Processing, and Large Language Models</li>
-                <li>Relevant Coursework: Advanced Machine Learning, Deep Learning, NLP, Data Mining, Big Data Analytics</li>
-                <li>GPA: 3.8/4.0</li>
+                <li>Coursework: Advanced ML, Deep Learning, NLP, Data Mining, Big Data Analytics</li>
             </ul>
         </div>
+
         <div class="timeline-item">
-            <h3>Bachelor of Technology in Electronics and Communication Engineering</h3>
-            <p class="text-muted">Jawaharlal Nehru Technological University | 2018 - 2022 | Hyderabad, India</p>
+            <h3>Graduate Certificate in Natural Language Processing</h3>
+            <p class="text-muted mb-1">University of Arizona &middot; 2024 &middot; Tucson, AZ</p>
             <ul>
-                <li>Focused on Communication equipment/mediums, Computer Science fundamentals, Data Structures, and Algorithms</li>
-                <li>Relevant Coursework: Database Management Systems, Data Structures, Operating Systems, Computer Networks</li>
-                <li>GPA: 3.5/4.0</li>
+                <li>Advanced study in transformer architectures, BERT/GPT variants, and production NLP pipelines</li>
             </ul>
         </div>
+
+        <div class="timeline-item">
+            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                <div>
+                    <h3>Bachelor of Technology in Electronics &amp; Communication Engineering</h3>
+                    <p class="text-muted mb-1">Jawaharlal Nehru Technological University &middot; 2018 &ndash; 2022 &middot; Hyderabad, India</p>
+                </div>
+                <span class="badge bg-primary gpa-badge">GPA: 3.52 / 4.0</span>
+            </div>
+            <ul>
+                <li>Coursework: Database Management Systems, Data Structures, Operating Systems, Computer Networks</li>
+            </ul>
+        </div>
+
     </div>
 </section>
 
-<!-- Include Experience Section -->
+
+<!-- ═══════════════════════════════════════════════════════════ EXPERIENCE -->
 <section id="experience" class="mb-5">
     <h2 class="mb-4">Experience</h2>
     <div class="timeline">
+
+        <!-- WorldPac -->
         <div class="timeline-item">
-            <h3>AI Programmer (Volunteer)</h3>
-            <p class="text-muted">Acts4Unity Foundation | Feb 2025 - Present | Palo Alto, CA, USA</p>
+            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
+                <div>
+                    <h3 class="mb-0">Data Scientist <span class="text-muted fw-normal fs-6">(Placed via bld.ai)</span></h3>
+                    <p class="text-muted mb-0">Worldpac &middot; Jan 2026 &ndash; Present &middot; Oakbrook Terrace, IL</p>
+                </div>
+                <span class="badge bg-success align-self-start">Current Role</span>
+            </div>
             <ul>
-                <li>Developing a multi-modal AI video agent for mental health support using D-ID, Gemini LLM, and Wav2Vec.
-                <li>Implemented facial expression analysis and micro-expression detection for emotional intelligence. </li>
-                <li> Integrated secure databases to track emotional analytics and improve conversational AI capabilities.</li>
+                <li>Engineered end-to-end data pipelines (Snowflake, Databricks, PySpark, SQL) to clean, transform, and validate tens of millions of records as the core data foundation for production pricing and supply chain models</li>
+                <li>Led Phase 2 of a pricing optimization initiative &mdash; refining SKU-level pricing strategy to improve margins by <strong>5&ndash;6%</strong> and offset quantity loss from Phase 1, targeting a <strong>$15M+ revenue uplift</strong> across Worldpac's auto parts catalog</li>
+                <li>Built the complete discounting strategy end-to-end &mdash; from data pipeline to behavioral segmentation and clustering models &mdash; identifying discount-sensitive customer cohorts and optimizing discount depth to reduce margin leakage while retaining key accounts</li>
+                <li>Expanding scope to supply chain use cases &mdash; building data pipelines and analytical foundations to support inventory and logistics decision-making across Worldpac's distribution network</li>
             </ul>
+            <div class="exp-tags mt-2">
+                <span class="badge bg-secondary">Databricks</span>
+                <span class="badge bg-secondary">Snowflake</span>
+                <span class="badge bg-secondary">PySpark</span>
+                <span class="badge bg-secondary">Pricing Models</span>
+                <span class="badge bg-secondary">Customer Segmentation</span>
+                <span class="badge bg-secondary">Clustering</span>
+            </div>
         </div>
 
+        <!-- Edmentum -->
         <div class="timeline-item">
-            <h3>Data Science Intern</h3>
-            <p class="text-muted">Tricon Infotech LLC | May 2024 - Jul 2024 | Hoboken, NJ, USA</p>
+            <div class="mb-2">
+                <h3 class="mb-0">Data Engineer <span class="text-muted fw-normal fs-6">(Via Tricon Infotech)</span></h3>
+                <p class="text-muted mb-0">Edmentum &middot; Jun 2025 &ndash; Jan 2026 &middot; Minnesota, United States</p>
+            </div>
             <ul>
-                <li>Built an AI-driven educational content tagging system, automating classification with 95% accuracy using GPT and Neo4j.</li>
-                <li>Developed NLP pipelines using BERT embeddings integrated into a knowledge graph, enhancing content retrieval by 100%.</li>
-                <li>Created a Gemini-powered chatbot translating natural language into Cypher, improving query response time by 70%</li>
-                <li>Collaborated closely with cross-functional stakeholders and engineering teams, refining algorithms based on real-time feedback.</li>
+                <li>Led a <strong>4-member cross-functional team</strong> (including 3 offshore engineers in India) to execute a full-scale migration of hundreds of tables from Microsoft SQL Server to PostgreSQL &mdash; eliminating vendor dependency and contributing to <strong>millions in infrastructure cost savings</strong></li>
+                <li>Built and orchestrated migration pipelines using <strong>Apache Airflow</strong> and <strong>Databricks</strong>, ensuring data integrity, schema consistency, and zero data loss across the transition</li>
+                <li>Upgraded financial reporting infrastructure from Oracle NetSuite to NetSuite 2 by coordinating directly with Oracle's technical team, replicating existing reports and integrating updated APIs into existing pipelines</li>
+                <li>Modernized legacy pipeline systems by upgrading components and onboarding new data sources &mdash; improving reliability and maintainability of Edmentum's core data infrastructure</li>
             </ul>
+            <div class="exp-tags mt-2">
+                <span class="badge bg-secondary">Apache Airflow</span>
+                <span class="badge bg-secondary">Databricks</span>
+                <span class="badge bg-secondary">PostgreSQL</span>
+                <span class="badge bg-secondary">SQL Server</span>
+                <span class="badge bg-secondary">NetSuite</span>
+                <span class="badge bg-secondary">Data Migration</span>
+            </div>
         </div>
 
+        <!-- CFG Health -->
         <div class="timeline-item">
-            <h3>Professional development</h3>
-            <p class="text-muted">Career Break| Aug 2023 - Dec 2024 | Tucson, AZ, USA</p>
+            <div class="mb-2">
+                <h3 class="mb-0">Data Consultant <span class="text-muted fw-normal fs-6">(Via Tricon Infotech)</span></h3>
+                <p class="text-muted mb-0">CFG Health &middot; May 2025 &ndash; Aug 2025 &middot; New Jersey, United States</p>
+            </div>
             <ul>
+                <li>Built end-to-end data pipelines integrating <strong>Paycom API</strong> with <strong>Microsoft Fabric</strong>, automating ETL of employee salary and utilization data across CFG Health's county jail healthcare staffing operations</li>
+                <li>Developed interactive <strong>Power BI dashboards</strong> with DAX queries to surface real-time workforce spending visibility &mdash; enabling leadership to identify overstaffing, misallocated hours, and underutilized workers across facilities</li>
+                <li>Directly contributed to reducing employee salary expenditure from <strong>$11M to $8M in 3 months (~27% cost reduction)</strong> by exposing workforce inefficiencies and enabling data-driven staffing decisions</li>
+                <li>Delivered actionable insights that helped CFG Health optimize worker utilization across county jail healthcare facilities, improving both financial performance and operational efficiency</li>
             </ul>
+            <div class="exp-tags mt-2">
+                <span class="badge bg-secondary">Microsoft Fabric</span>
+                <span class="badge bg-secondary">Power BI</span>
+                <span class="badge bg-secondary">DAX</span>
+                <span class="badge bg-secondary">Paycom API</span>
+                <span class="badge bg-secondary">ETL</span>
+                <span class="badge bg-secondary">Healthcare Analytics</span>
+            </div>
         </div>
 
+        <!-- Acts4Unity -->
         <div class="timeline-item">
-            <h3>Data Engineer (Contract)</h3>
-            <p class="text-muted">HealthEdge| Jan 2023 - Jun 2023 | Alexandria, VA, USA</p>
+            <div class="mb-2">
+                <h3 class="mb-0">AI Engineer</h3>
+                <p class="text-muted mb-0">Acts4Unity Foundation &middot; Feb 2025 &ndash; May 2025 &middot; Palo Alto, CA</p>
+            </div>
             <ul>
-                <li>Engineered HIPAA-compliant real-time FHIR/HL7 data pipelines, increasing processing efficiency by 90%.</li>
-                <li>Automated SQL stored procedures handling 1M+ transactions weekly, reducing data latency significantly.</li>
-                <li>Designed scalable streaming solutions with Azure, Kafka; enhanced issue detection with DataDog, reducing downtime by 40%.</li>
-                <li>Integrated unit tests and automated deployments, enhancing pipeline reliability and production stability.</li>
+                <li>Independently designed and developed a voice-enabled AI mental health companion &mdash; a conversational system that listens to users, understands their emotional state, and responds with context-aware supportive dialogue</li>
+                <li>Built a speech-to-text pipeline using <strong>OpenAI Whisper</strong> to transcribe user voice input in real time, feeding into a <strong>Mistral AI LLM</strong> fine-tuned to generate empathetic, situation-aware responses</li>
+                <li>Architected the end-to-end system solo &mdash; from audio ingestion and transcription to LLM prompt engineering and response generation &mdash; delivering a working POC for a nonprofit focused on accessible mental health support</li>
+                <li>Applied <strong>Chain-of-Thought (CoT) reasoning</strong> and prompt engineering to enhance LLM response quality; partnered with clinical experts to align model outputs with health KPIs</li>
             </ul>
+            <div class="exp-tags mt-2">
+                <span class="badge bg-secondary">OpenAI Whisper</span>
+                <span class="badge bg-secondary">Mistral AI</span>
+                <span class="badge bg-secondary">LLM Fine-Tuning</span>
+                <span class="badge bg-secondary">Prompt Engineering</span>
+                <span class="badge bg-secondary">Speech-to-Text</span>
+                <span class="badge bg-secondary">CoT Reasoning</span>
+            </div>
         </div>
 
+        <!-- Tricon Data Science Team Member (McGraw Hill) -->
         <div class="timeline-item">
-            <h3>Data Engineer (Contract)</h3>
-            <p class="text-muted">Informa | Apr 2022 - Jan 2023 | New York, NY, USA</p>
+            <div class="mb-2">
+                <h3 class="mb-0">Data Science Team Member</h3>
+                <p class="text-muted mb-0">Tricon Infotech &middot; May 2024 &ndash; Dec 2024 &middot; United States</p>
+            </div>
             <ul>
-                <li>Built AWS-based Spark ETL pipelines, integrating data from 50+ global events into DOMO BI with 100% validation accuracy.</li>
-                <li>Created governance dashboards resolving critical data leakage, ensuring accurate and reliable reporting.</li>
-                <li>Led migration of 10M+ records from DocumentDB to PostgreSQL, tripling performance and reducing costs by 25%</li>
-                <li>Automated real-time data quality alerts via Microsoft Teams integration, reducing resolution time by 99%.</li>
-                <li>Built AI-driven recommendation systems for personalized notifications, increasing user engagement by 40%.</li>
+                <li>Developed a <strong>RAG-based educational chatbot POC</strong> for McGraw Hill Education enabling students to ask questions and receive context-aware answers alongside relevant source documents &mdash; replacing a manual process that required tens of staff to tag and maintain document metadata</li>
+                <li>Designed a <strong>Knowledge Graph pipeline</strong> using Google BERT to automatically extract and assign structured tags (subject, grade level, state board standard, content depth) to <strong>1,000+ textbooks and research papers</strong></li>
+                <li>Ingested BERT-generated tags as nodes and relationships into <strong>Neo4j</strong>, enabling fast semantic retrieval via dynamically generated Cypher queries &mdash; dramatically reducing document lookup latency vs. traditional search</li>
+                <li>Integrated <strong>GPT-2</strong> for natural language response generation, combining graph-retrieved context with generative output to deliver accurate, curriculum-aligned answers to student queries</li>
             </ul>
+            <div class="exp-tags mt-2">
+                <span class="badge bg-secondary">RAG</span>
+                <span class="badge bg-secondary">BERT</span>
+                <span class="badge bg-secondary">Neo4j</span>
+                <span class="badge bg-secondary">Knowledge Graphs</span>
+                <span class="badge bg-secondary">GPT-2</span>
+                <span class="badge bg-secondary">Cypher</span>
+            </div>
         </div>
 
+        <!-- HealthEdge -->
         <div class="timeline-item">
-            <h3>Associate Software Engineer</h3>
-            <p class="text-muted">Tricon Infotech Pvt Ltd | Apr 2022 - Jun 2023</p>
+            <div class="mb-2">
+                <h3 class="mb-0">Data Engineer <span class="text-muted fw-normal fs-6">(Via Tricon Infotech)</span></h3>
+                <p class="text-muted mb-0">HealthEdge &middot; Jan 2023 &ndash; Jul 2023 &middot; Virginia, United States</p>
+            </div>
             <ul>
-                <li>Worked as a Data Engineer on client projects for Informa Markets and HealthEdge, delivering scalable data solutions. Collaborated with cross-functional teams to build, optimize, and maintain data pipelines, ensuring efficient data processing and analytics.</li>
+                <li>Architected and built a real-time <strong>EHR data pipeline in C#</strong> to replace a legacy batch system processing <strong>1M+ records every 6 hours</strong> &mdash; enabling continuous, event-driven ingestion for UnitedHealthcare's healthcare data workflows</li>
+                <li>Implemented <strong>HL7 format validation</strong> as a mandatory gateway in the pipeline &mdash; ensuring only compliant EHR records passed through, maintaining data integrity and regulatory compliance</li>
+                <li>Built automated retry logic (2-attempt fault tolerance) and integrated <strong>Microsoft Teams alerting</strong> for failed records &mdash; reducing manual monitoring overhead and improving incident response time</li>
+                <li>Conducted POCs using <strong>Confluent Kafka</strong> and <strong>RabbitMQ</strong> to evaluate next-generation messaging architectures, presenting findings to the client to guide their long-term real-time data strategy</li>
             </ul>
+            <div class="exp-tags mt-2">
+                <span class="badge bg-secondary">C#</span>
+                <span class="badge bg-secondary">HL7 / EHR</span>
+                <span class="badge bg-secondary">Confluent Kafka</span>
+                <span class="badge bg-secondary">RabbitMQ</span>
+                <span class="badge bg-secondary">Real-time Pipelines</span>
+                <span class="badge bg-secondary">HIPAA</span>
+            </div>
         </div>
 
+        <!-- Informa -->
         <div class="timeline-item">
-            <h3>Business Analyst and Operations Support</h3>
-            <p class="text-muted">Santhoshi Enterprises(Family Group) | Jan 2019 - Mar 2022 | Hyderabad, TG, India</p>
+            <div class="mb-2">
+                <h3 class="mb-0">Data Engineer <span class="text-muted fw-normal fs-6">(Via Tricon Infotech)</span></h3>
+                <p class="text-muted mb-0">Informa Markets &middot; Apr 2022 &ndash; Jan 2023 &middot; London Area, United Kingdom</p>
+            </div>
             <ul>
-                <li>Analyzed sales data and customer behaviors, leading to the launch of a second store, increasing revenue by 25%. </li>
-                <li>Designed inventory management systems, reducing stock shortages by 30% and improving availability to 95%. </li>
-                <li>Collaborated with procurement and management teams, streamlining operations and enhancing customer satisfaction. </li>
+                <li>Responded to a critical data pipeline failure that was causing event attendees to be missing from registration lists &mdash; threatening a <strong>$50M annual event contract</strong> across EMEA's largest trade events</li>
+                <li>Built an emergency reconciliation pipeline in Python and SQL to extract and cross-reference registrations from multiple sources &mdash; identifying missing attendees and resolving discrepancies in real time</li>
+                <li>Developed a <strong>DOMO dashboard</strong> comparing data across all sources to surface registration gaps visually, enabling the events team to act immediately and recover affected attendees before events</li>
+                <li>Scaled the validated pipeline across all <strong>Informa IRIS events</strong> post-incident &mdash; establishing a standardized, reliable registration data infrastructure on <strong>AWS</strong> to prevent recurrence across the full event portfolio</li>
+                <li>Built AI-driven recommendation engine using collaborative filtering, projected to increase event engagement by <strong>40%</strong></li>
             </ul>
+            <div class="exp-tags mt-2">
+                <span class="badge bg-secondary">Python</span>
+                <span class="badge bg-secondary">SQL</span>
+                <span class="badge bg-secondary">AWS</span>
+                <span class="badge bg-secondary">DOMO BI</span>
+                <span class="badge bg-secondary">ETL</span>
+                <span class="badge bg-secondary">Data Reconciliation</span>
+            </div>
         </div>
+
     </div>
 </section>
 
 
-<!-- Include Projects Section -->
+<!-- ═══════════════════════════════════════════════════════════ PROJECTS -->
 <section id="projects" class="mb-5">
     <h2 class="mb-4">Projects</h2>
     <div class="row g-4">
+
         <div class="col-md-6">
             <div class="card project-card h-100">
-                <div class="card-body">
-                    <h3 class="card-title">Restaurant Chatbot | MenuData.ai</h3>
-                    <p class="card-text">A restaurant recommendation engine built on San Francisco based restaurant data with live data from wikipedia and newapi.</p>
-                    <div class="mb-3">
-                        <span class="badge bg-primary me-2">Python</span>
-                        <span class="badge bg-primary me-2">FAISS</span>
-                        <span class="badge bg-primary me-2">LLM(Mistral AI)</span>
-                        <span class="badge bg-primary me-2">SentenceTransformer(all-MiniLM-L6-v2)</span>
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h3 class="card-title mb-0">MenuData.ai &mdash; Agentic Restaurant Intelligence</h3>
+                        <span class="badge bg-success ms-2 flex-shrink-0">Live</span>
                     </div>
-                    <a href="https://menudata-likithkumardundigalla.streamlit.app/" class="btn btn-outline-primary">
-                        <i class="fas fa-robot"></i>Chatbot
-                    </a>
-                    <a href="https://github.com/LikithKumarDundigalla/MenuData" class="btn btn-outline-primary">
-                        <i class="fab fa-github me-2"></i>View on GitHub
-                    </a>
+                    <p class="text-muted small mb-2"><i class="fas fa-bolt me-1"></i><strong>Problem:</strong> Static restaurant directories fail to surface context-aware, real-time recommendations.</p>
+                    <p class="card-text flex-grow-1">Built an agentic system that auto-decides between retrieval and generation using <strong>Mistral AI</strong>. The RAG pipeline combines structured restaurant data with live info from Wikipedia and NewsAPI. Semantic search over <strong>10K+ items</strong> with sub-second latency using Sentence Transformers + FAISS. Dynamic embedding updates and query routing deployed on Streamlit.</p>
+                    <div class="mb-3">
+                        <span class="badge bg-secondary me-1 mb-1">Mistral AI</span>
+                        <span class="badge bg-secondary me-1 mb-1">FAISS</span>
+                        <span class="badge bg-secondary me-1 mb-1">Sentence Transformers</span>
+                        <span class="badge bg-secondary me-1 mb-1">Agentic RAG</span>
+                        <span class="badge bg-secondary me-1 mb-1">Streamlit</span>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="https://menudata-likithkumardundigalla.streamlit.app/" target="_blank" class="btn btn-outline-primary btn-sm">
+                            <i class="fas fa-robot me-1"></i>Live Demo
+                        </a>
+                        <a href="https://github.com/LikithKumarDundigalla/MenuData" target="_blank" class="btn btn-outline-primary btn-sm">
+                            <i class="fab fa-github me-1"></i>GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
 
-
         <div class="col-md-6">
             <div class="card project-card h-100">
-                <div class="card-body">
-                    <h3 class="card-title">Human or ChatGPT Generated Content?</h3>
-                    <p class="card-text">This project implements multiple NLP-based classification techniques to distinguish between human-written and ChatGPT-generated text.</p>
-                    <div class="mb-3">
-                        <span class="badge bg-primary me-2">nltk</span>
-                        <span class="badge bg-primary me-2">gensim</span>
-                        <span class="badge bg-primary me-2">scikit-learn</span>
-                        <span class="badge bg-primary me-2">matplotlib</span>
-                        <span class="badge bg-primary me-2">seaborn</span>
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h3 class="card-title mb-0">McGraw Hill Education &mdash; Knowledge Graph + RAG</h3>
+                        <span class="badge bg-secondary ms-2 flex-shrink-0">Freelance</span>
                     </div>
-                    <a href="https://github.com/LikithKumarDundigalla/Distinguishing-Between-Human-Generated-and-ChatGPT-generated-content" class="btn btn-outline-primary">
-                        <i class="fab fa-github me-2"></i>View on GitHub
-                    </a>
+                    <p class="text-muted small mb-2"><i class="fas fa-bolt me-1"></i><strong>Problem:</strong> Manual document tagging required tens of staff; keyword search returned low-relevance results across 1,000+ textbooks.</p>
+                    <p class="card-text flex-grow-1">Designed a <strong>Knowledge Graph pipeline</strong> using Google BERT to automatically extract and assign structured tags (subject, grade level, state board standard) to 1,000+ textbooks. Stored embeddings in Neo4j for Cypher-based semantic retrieval. Integrated GPT-2 for curriculum-aligned response generation. Separately built a serverless Azure Cognitive Search pipeline achieving a <strong>40% boost in search precision</strong>.</p>
+                    <div class="mb-3">
+                        <span class="badge bg-secondary me-1 mb-1">BERT</span>
+                        <span class="badge bg-secondary me-1 mb-1">Neo4j</span>
+                        <span class="badge bg-secondary me-1 mb-1">GPT-2</span>
+                        <span class="badge bg-secondary me-1 mb-1">RAG</span>
+                        <span class="badge bg-secondary me-1 mb-1">Azure Cognitive Search</span>
+                        <span class="badge bg-secondary me-1 mb-1">Knowledge Graphs</span>
+                    </div>
+                    <div>
+                        <span class="text-muted small"><i class="fas fa-lock me-1"></i>Private &mdash; NDA</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-
         <div class="col-md-6">
             <div class="card project-card h-100">
-                <div class="card-body">
-                    <h3 class="card-title">Multi-label Emotion Detection </h3>
-                    <p class="card-text">This project implements multiple NLP-based classification techniques to predict emotions from text data, identifying sentiments such as admiration, amusement, gratitude, love, pride, relief, and remorse.</p>
+                <div class="card-body d-flex flex-column">
+                    <h3 class="card-title">Human vs. ChatGPT Text Detection</h3>
+                    <p class="text-muted small mb-2"><i class="fas fa-bolt me-1"></i><strong>Problem:</strong> Growing need to reliably detect AI-generated content in academic and professional contexts.</p>
+                    <p class="card-text flex-grow-1">Implemented multiple NLP-based classification techniques using linguistic features, perplexity scores, and stylometric analysis to distinguish human-written from ChatGPT-generated text at scale.</p>
                     <div class="mb-3">
-                        <span class="badge bg-primary me-2">transformers</span>
-                        <span class="badge bg-primary me-2">tensorflow </span>
-                        <span class="badge bg-primary me-2">pandas </span>
-                        <span class="badge bg-primary me-2">numpy</span>
+                        <span class="badge bg-secondary me-1 mb-1">NLTK</span>
+                        <span class="badge bg-secondary me-1 mb-1">Gensim</span>
+                        <span class="badge bg-secondary me-1 mb-1">scikit-learn</span>
+                        <span class="badge bg-secondary me-1 mb-1">NLP Classification</span>
                     </div>
-                    <a href="https://github.com/LikithKumarDundigalla/NN_Project" class="btn btn-outline-primary">
-                        <i class="fab fa-github me-2"></i>View on GitHub
-                    </a>
+                    <div>
+                        <a href="https://github.com/LikithKumarDundigalla/Distinguishing-Between-Human-Generated-and-ChatGPT-generated-content" target="_blank" class="btn btn-outline-primary btn-sm">
+                            <i class="fab fa-github me-1"></i>GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="col-md-6">
+            <div class="card project-card h-100">
+                <div class="card-body d-flex flex-column">
+                    <h3 class="card-title">Multi-label Emotion Detection</h3>
+                    <p class="text-muted small mb-2"><i class="fas fa-bolt me-1"></i><strong>Problem:</strong> Binary sentiment analysis fails to capture the nuanced emotional spectrum of human language.</p>
+                    <p class="card-text flex-grow-1">Built a BERT-based multi-label classifier predicting fine-grained emotions (admiration, amusement, gratitude, love, pride, relief, remorse) from text using HuggingFace Transformers and TensorFlow.</p>
+                    <div class="mb-3">
+                        <span class="badge bg-secondary me-1 mb-1">BERT</span>
+                        <span class="badge bg-secondary me-1 mb-1">TensorFlow</span>
+                        <span class="badge bg-secondary me-1 mb-1">HuggingFace</span>
+                        <span class="badge bg-secondary me-1 mb-1">Multi-label Classification</span>
+                    </div>
+                    <div>
+                        <a href="https://github.com/LikithKumarDundigalla/NN_Project" target="_blank" class="btn btn-outline-primary btn-sm">
+                            <i class="fab fa-github me-1"></i>GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
-<!-- Include Contact Section -->
+
+<!-- ═══════════════════════════════════════════════════════════ CONTACT -->
 <section id="contact" class="mb-5">
     <h2 class="mb-4">Contact</h2>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-body text-center">
-                    <h3 class="mb-4">Let's Connect!</h3>
-                    
-                    <div class="social-links mb-4">
-                        <a href="https://github.com/LikithKumarDundigalla" target="_blank" title="GitHub">
-                            <i class="fab fa-github"></i>
+                <div class="card-body text-center py-5">
+                    <h3 class="mb-2">Let's Build Something Together</h3>
+                    <p class="text-muted mb-4">
+                        Actively seeking <strong>Data Scientist, Data Engineer,</strong> and <strong>ML Engineer</strong> roles.<br>
+                        Remote or hybrid, open to all industries.
+                    </p>
+
+                    <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
+                        <a href="mailto:likithkumar.dundigalla04@gmail.com" class="btn btn-primary">
+                            <i class="fas fa-envelope me-2"></i>Email Me
                         </a>
-                        <a href="https://linkedin.com/in/likithkumard04" target="_blank" title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
+                        <a href="https://linkedin.com/in/likithkumardundigalla-data-ai" target="_blank" class="btn btn-outline-light">
+                            <i class="fab fa-linkedin me-2"></i>LinkedIn
                         </a>
-                        <a href="mailto:likithkumard@arizona.edu" title="Email">
-                            <i class="fas fa-envelope"></i>
+                        <a href="https://github.com/LikithKumarDundigalla" target="_blank" class="btn btn-outline-light">
+                            <i class="fab fa-github me-2"></i>GitHub
+                        </a>
+                        <a href="LikithKumarDundigalla_DataScience_Resume.pdf" target="_blank" class="btn btn-outline-light">
+                            <i class="fas fa-download me-2"></i>Resume
                         </a>
                     </div>
 
-                    <div class="contact-details">
-                        <p class="mb-2">
-                            <i class="fas fa-envelope me-2"></i>
-                            likithkumard@arizona.edu
-                        </p>
-                        <p class="mb-2">
-                            <i class="fab fa-github me-2"></i>
-                            github.com/LikithKumarDundigalla
-                        </p>
-                        <p class="mb-2">
-                            <i class="fab fa-linkedin me-2"></i>
-                            linkedin.com/in/likithkumard04
-                        </p>
+                    <div class="contact-details text-muted">
+                        <p class="mb-1"><i class="fas fa-envelope me-2"></i>likithkumar.dundigalla04@gmail.com</p>
+                        <p class="mb-1"><i class="fas fa-phone me-2"></i>(520) 534-7225</p>
+                        <p class="mb-0"><i class="fas fa-location-dot me-2"></i>Villa Park, IL &middot; Greater Chicago Area</p>
                     </div>
                 </div>
             </div>
